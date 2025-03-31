@@ -1,0 +1,14 @@
+name: CICD for Application 1
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  cicd:
+    uses: szkercza-uni/github-workflows/.github/workflows/cicd.yaml@main
+    secrets: inherit
